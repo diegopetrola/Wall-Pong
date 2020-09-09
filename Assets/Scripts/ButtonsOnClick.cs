@@ -10,6 +10,7 @@ public class ButtonsOnClick : MonoBehaviour
     public TMP_InputField input;
     public GameObject mainMenu;
     public GameObject joinGameMenu;
+    public GameObject optionsMenu;
 
     private string player1Name = "Player1Name";
     //public string playerPrefString;
@@ -39,6 +40,16 @@ public class ButtonsOnClick : MonoBehaviour
     public void BackJoinGameMenu() {
         mainMenu.SetActive(true);
         joinGameMenu.SetActive(false);
+    }
+
+    public void BackToMainMenu() {
+        transform.parent.gameObject.SetActive(false);
+        mainMenu.SetActive(true);
+    }
+
+    public void OptionsButton() {
+        transform.parent.gameObject.SetActive(false);
+        optionsMenu.SetActive(true);
     }
 
     public void JoinButton() {

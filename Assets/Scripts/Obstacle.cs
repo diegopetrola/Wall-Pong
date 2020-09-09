@@ -1,6 +1,6 @@
-﻿//#define DEBUG_OnRoomPropertiesUpdate
-//#define DEBUG_ModifyWall
-//#define DEBUG_UpdateMesh
+﻿#define DEBUG_OnRoomPropertiesUpdate
+#define DEBUG_ModifyWall
+#define DEBUG_UpdateMesh
 
 using System.Collections;
 using System.Collections.Generic;
@@ -74,7 +74,7 @@ public class Obstacle : MonoBehaviourPunCallbacks {
 #if (DEBUG_OnRoomPropertiesUpdate)
         Debug.Log("Calling SetCustomProperties - " + indexToBeMoved.Count);
 #endif
-        if (indexToBeMoved.Count > 0) {
+        if (indexToBeMoved.Count > 0 && PhotonNetwork.CurrentRoom != null) {
 
             //...them we update remotely
             PhotonNetwork.CurrentRoom.SetCustomProperties(new Hashtable { { hashKey, indexToBeMoved } });
@@ -108,7 +108,6 @@ public class Obstacle : MonoBehaviourPunCallbacks {
     }
 
     void PrepareRound() {
-        Debug.Log("Reseted Board");
         canModifyWall = false;
         vertices = mesh.vertices;
         //Reset all vertices
@@ -124,7 +123,7 @@ public class Obstacle : MonoBehaviourPunCallbacks {
         canModifyWall = true;
     }
 
-    override public  void OnEnable() {
+    override public void OnEnable() {
         base.OnEnable();
         GameManager.Instance.PrepareRound += PrepareRound;
         GameManager.Instance.StartRound += StartRound;

@@ -109,7 +109,7 @@ public class GameManager : Singleton<GameManager>
 
         if (Input.GetKey(KeyCode.Mouse0))
             wall.ModifyObstacle(true);
-        else if (Input.GetKey(KeyCode.Mouse0))
+        else if (Input.GetKey(KeyCode.Mouse1))
             wall.ModifyObstacle(false);
     }
     #endregion
@@ -190,7 +190,8 @@ public class GameManager : Singleton<GameManager>
         //Do a 3,2,1 countdown and starts the game
         startText.text = "3";
         LeanTween.resume(textAnimatonId);
-        LeanTween.alphaText(startText.rectTransform, 0, 1f).setOnCompleteOnRepeat(true).setOnComplete(onCompleteText).setRepeat(3);
+        LeanTween.alphaText(startText.rectTransform, 0, 1f).setOnCompleteOnRepeat(true).
+                    setOnComplete(onCompleteText).setRepeat(3);
     }
 
     IEnumerator RegenerateEnergy() {
