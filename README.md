@@ -21,9 +21,9 @@
  
  </details>
  
- An energy bar will deplete when you create or destroy obstacles, if you run out of energy you won't be able to do anything until the energy regenerates over time.
+ The energy bar (close to the mouse pointer) will deplete as you create and destroy obstacles, if you run out of energy you won't be able to do anything until the energy regenerates over time.
  
- It is possible to host and join online games using the "HOST GAME" option in the main menu.
+ It is possible to host and join online games using the "HOST GAME" option in the main menu. 
  
  ## Video
  A preview video of the game can be seen below.
