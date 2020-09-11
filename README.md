@@ -5,7 +5,7 @@
  Use `left mouse click` to create obstacles for the ball to bounce.
  
  <details>
- <summary>Example</summary>
+ <summary>Example of making an obstacle</summary>
   
  ![Create Wall gif](/Images/create-wall.gif)
   
@@ -15,8 +15,10 @@
  And `right mouse click` to destroy the obstacles.
  
  <details>
- <summary>Example</summary>
-    ![Destroy Wall gif](/Images/destroy-wall.gif)
+ <summary>Example of destroying an obstacle</summary>
+ 
+ ![Destroy Wall gif](/Images/destroy-wall.gif)
+ 
  </details>
  
  It is possible to host and join online games using the "HOST GAME" option in the main menu.
